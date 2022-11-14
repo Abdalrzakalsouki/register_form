@@ -12,44 +12,48 @@
     <title>Register form</title>
   </head>
   <body>
-    <section>
-      <form method="POST">
-        <label for="user-name">Username</label>
-        <input
-          type="text"
-          id="user-name"
-          name="user-name"
-          required
-          placeholder="Type your name in English only"
-        />
-        <label for="user-password">Password</label>
-        <input
-          type="password"
-          id="user-password"
-          name="user-password"
-          required
-          placeholder="Type a strong password"
-        />
-        <label for="user-email">Email</label>
-        <input
-          type="email"
-          id="user-email"
-          required
-          placeholder="Type a vaild email"
-          name="user-email"
-        />
-        <label for="user-phone">Phone</label>
-        <input
-          type="text"
-          id="user-phone"
-          name="user-phone"
-          pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-        />
-        <label for="user-brief">Brieft</label>
-        <textarea id="user-brief" name="user-brief"> </textarea>
-
-        <input type="submit" value="Register" />
-      </form>
-    </section>
+    <form method="post">
+      <div class="col">
+        <div>
+          <label for="user-name">User Name <span>*</span></label>
+          <input
+            type="text"
+            id="user-name"
+            name="user-name"
+            required
+            placeholder="Type your name in English only"
+          />
+          <label for="user-password">Password <span>*</span></label>
+          <input
+            type="password"
+            id="user-password"
+            name="user-password"
+            placeholder="Type a complex password"
+            required
+          />
+          <label for="user-email">Email <span>*</span></label>
+          <input
+            type="email"
+            id="user-email"
+            name="user-email"
+            required
+            placeholder="Type a valid email"
+          />
+        </div>
+        <div>
+          <label for="user-phone">Phone</label>
+          <input
+            type="text"
+            id="user-phone"
+            name="user-phone"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            required
+          />
+          <label for="brief">Brief</label>
+          <textarea id="brief" name="brief" required></textarea>
+        </div>
+      </div>
+      <button type="button" value="Register">Register</button>
+    </form>
   </body>
 </html>
